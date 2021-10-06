@@ -1,0 +1,39 @@
+
+.black {
+ width: 100px;
+ height: 100px;
+ /*max-width: 100px;*/
+ /*max-height: 100px;*/
+ background-color: #20522d;
+}
+.white {
+ /*max-width: 100px;*/
+ /*max-height: 100px;*/
+ /*width: 100px;*/
+ /*height: 100px;*/
+ background-color: rgba(47, 47, 59, 0.3);
+}
+
+/*.container {*/
+
+/* min-height: 800px;*/
+/* max-width: 800px;*/
+/* max-height: 800px;*/
+/* outline:  thick black solid;*/
+/*}*/
+
+.container {
+ max-width: 850px;
+ height: 850px;
+}
+
+
+body {
+ width: 1200px;
+ height: 850px;
+}
+
+div {
+ font-size: 100px;
+ margin-right: 0px;
+}
