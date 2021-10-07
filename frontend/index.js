@@ -1,4 +1,3 @@
-
 const figs = () => [
     {rook: "<i class=\"fas fa-chess-rook\"></i>"},
     {queen: "<i class=\"fas fa-chess-queen\"></i>"},
@@ -18,6 +17,6 @@ for (let row = 0; i < document.getElementsByClassName("container").length; i++) 
  * This function check then move is correct and remove opponent figure if they
  * is on this position
  */
-function checkTargetPosition(x,y) {
+function checkTargetPosition(x, y) {
 
 }
