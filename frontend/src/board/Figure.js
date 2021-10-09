@@ -1,15 +1,16 @@
 
 class Figure {
-    x;
-    y;
     player = Player;
+    /**
+     * will be binding with fiddle at board
+     */
     html;
 
-    constructor(player, x, y) {
+
+    constructor(player) {
         this.player = player;
-        this.x = x;
-        this.y = y;
     }
+
 
     /**
      * function is call when player have active some figure
@@ -30,9 +31,5 @@ class Figure {
             this.y = y_target;
         }
     }
-
-
-
-
 
 }
