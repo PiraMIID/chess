@@ -1,0 +1,71 @@
+
+.black {
+    width: 100px;
+    height: 100px;
+    /*max-width: 100px;*/
+    /*max-height: 100px;*/
+    /*background-color: #20522d;*/
+    background-image:  url("https://img.freepik.com/darmowe-zdjecie/czarny-szary-marmur-tekstura-o-wysokiej-rozdzielczosci-widok-z-gory-naturalnego-kamienia-plytki_38607-570.jpg?size=626&ext=jpg");
+    filter: brightness(2.5);
+}
+
+.white {
+    max-width: 100px;
+    max-height: 100px;
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*background-color: rgba(47, 47, 59, 0.3);*/
+    background-image: url("https://img.freepik.com/darmowe-zdjecie/nieczysty-szary-marmur-teksturowany_53876-95567.jpg?size=626&ext=jpg");
+
+}
+
+/*.container {*/
+
+/* min-height: 800px;*/
+/* max-width: 800px;*/
+/* max-height: 800px;*/
+/* outline:  thick black solid;*/
+/*}*/
+
+.container {
+    max-width: 800px;
+    height: 800px;
+}
+
+
+body {
+    width: 1200px;
+    height: 850px;
+}
+
+/*.container.row.col {*/
+/*    min-height: 100px;*/
+/*    min-width: 100px;*/
+/*}*/
+
+i {
+    font-size: 100px;
+    margin-right: 0px;
+}
+.fas {
+    font-size: 100px;
+    margin-right: 0px;
+}
+
+i {
+    size: 100px;
+    margin-right: 0px;
+    color: black;
+}
+img {
+    width: 100%;
+    height: 100%;
+
+    object-position: -12px -4px;
+
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*background-color: rgba(47, 47, 59, 0.3);*/
+    /*background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/dash/150/br.png");*/
+    /*background-position: center;*/
+}
