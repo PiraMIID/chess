@@ -8,8 +8,19 @@ import '@fortawesome/free-regular-svg-icons'
 import '@fortawesome/free-solid-svg-icons'
 import math from "mathjs";
 
+
 // import '../../images'
 
+//todo: bollen variable to use when player click figure to move
+
+/*
+    I want to add soccer table to player like :  1-0 in matches
+ */
+
+/*
+    important about react:
+    - is create to using mostly function so every action ,ust be function
+ */
 
 const figs = [
     {rook: "<div style= background-image: rel='../../images/br.png'>"},
@@ -19,6 +30,9 @@ const figs = [
     {king: "<div style= background-image: rel='../../images/bk.png'>"},
     {bishop: "<div style= background-image: rel='../../images/bb.png'>"},
 ];
+
+// this is the copy of fig
+const [...fig] = figs;
 
 function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
