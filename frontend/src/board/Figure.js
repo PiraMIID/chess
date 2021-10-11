@@ -9,6 +9,13 @@ const startGame = (admin_player, host_player, time_game) => {
 
 }
 
+const setFigureToPosition = (figure) => {
+    return figure
+}
+
+const {html,position,style} = figure;
+
+
 // todo: change concept example
 // todo: May better will be create full ready set to players in new class
 
@@ -68,7 +75,6 @@ const pawn = {
 
 class Figure {
     /**
-
      player = Player;
      * will be binding with fiddle at board
      */
