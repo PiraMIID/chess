@@ -72,7 +72,7 @@ const pawn = {
 //     }
 // }
 
-
+//todo this class is best way
 class Figure {
     /**
      player = Player;
@@ -107,3 +107,11 @@ class Figure {
     }
 
 }
+
+/*
+New plan:
+figure = new Bishop(some data);
+ */
+// todo : https://stackoverflow.com/questions/57066231/css-rotate-a-div-180-degrees-in-place/57068149
+// this link is answer how to relate board to second player
+
