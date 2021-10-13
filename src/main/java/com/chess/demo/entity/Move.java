@@ -7,6 +7,8 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class Move {
+    String player;
+    String figure;
     int x;
     int y;
 
