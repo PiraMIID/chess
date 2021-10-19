@@ -9,7 +9,16 @@ import '@fortawesome/free-solid-svg-icons'
 import math from "mathjs";
 
 
-// import '../../images'
+import rook from '../images/br.png'
+
+import queen from '../images/bq.png'
+import pawn from '../images/bp.png'
+import knight  from '../images/bn.png'
+import king  from '../images/bk.png'
+import bishop  from '../images/bb.png'
+
+
+
 
 //todo: bollen variable to use when player click figure to move
 
@@ -22,8 +31,10 @@ import math from "mathjs";
     - is create to using mostly function so every action ,ust be function
  */
 
+const figurs = [rook,queen,pawn,knight,king,bishop]
+
 const figs = [
-    {rook: "<div style= background-image: rel='../../images/br.png'>"},
+    {rook: "<div  style= background-image: rel='../../images/br.png'>"},
     {queen: "<div style= background-image: rel='../../images/bq.png'>"},
     {pawn: "<div style= background-image: rel='../../images/bp.png'>"},
     {knight: "<div style= background-image: rel='../../images/bn.png'>"},
@@ -49,29 +60,31 @@ function initFirstRow(whitePlayer) {
     //
     // }
 }
-
-function createGameMatrix(whitePlayer = "white", blackPlayer = "black") {
-    let matrix= [];
-    initFirstRow(whitePlayer);
-    matrix.push()
-    initFirstCol(whitePlayer);
-    return matrix;
-}
+//
+// function createGameMatrix(whitePlayer = "white", blackPlayer = "black") {
+//     let matrix= [];
+//     initFirstRow(whitePlayer);
+//     matrix.push()
+//     initFirstCol(whitePlayer);
+//     return matrix;
+// }
 function Board() {
 
 
-    let main_game_matrix =createGameMatrix();
+    // let main_game_matrix =createGameMatrix();
     let board_matrix = createFidlesBoardTags(8);
     return (
+
         <div className="Board">
             <Container>
                 <input id={"x"} type={"number"}/>
                 <input id={"y"} type={"number"}/>
-                <Button onClick={update}>Ustaw</Button>
+                <Button onClick={update} >Ustaw</Button>
                 {/*<Dropdown id={"figure"}>*/}
                     <DropdownButton id={"figure"} title={"Select figure"}>
-                        {figs.map((value, index) => {
-                            return <Dropdown.Item id={"dropItem"} onClick={update}>{value.rook}</Dropdown.Item>
+                        {figurs.map((value ) => {
+                            // let img = <img src={value} alt={'xc'}/>;
+                            return <Dropdown.Item id={"dropItem"} onClick={update}><img src={value} alt={'xc'}/></Dropdown.Item>
                         })}
                         {/*    <Dropdown.Item> { .rook }</Dropdown.Item>*/}
                         {/*    <Dropdown.Item> { figs().queen }</Dropdown.Item>*/}
@@ -102,18 +115,30 @@ export default Board;
 // todo is working but just when board is complete
 // let board_matrix = createFidlesBoardTags(8);
 function update() {
-    let detailedReactHTMLElement = document.createElement("div");
-    detailedReactHTMLElement.style.width = "100px";
+    // let detailedReactHTMLElement = document.createElement("img");
+    // detailedReactHTMLElement.style.width = "100px";
     // detailedReactHTMLElement.innerHTML = "<i class=\"fas fa-chess-rook\" style='height: 100px; width: 100px'></i>";
-    detailedReactHTMLElement.innerHTML = document.getElementById("dropItem").value;
-    let x = document.getElementById("x").value;
-    let y = document.getElementById("y").value;
-    console.log(x);
-    console.log(y);
-    if( x > 0 && x < 9 && y > 0 && y < 9) {
-        document.getElementsByClassName("container")[0].getElementsByClassName("row")[x]
-            .getElementsByClassName("col")[y].appendChild(detailedReactHTMLElement);
-    }
+    // const detailedReactHTMLElement = () => {
+    //     return document.createElement(null).innerHTML = document.getElementById("dropItem");
+    // }
+    //  // detailedReactHTMLElement.alt = 'git';
+    // console.log(detailedReactHTMLElement())
+    // detailedReactHTMLElement().style.padding = "0px";
+    // detailedReactHTMLElement.innerHTML = detailedReactHTMLElement;
+    // console.log(img);
+
+        let x = document.getElementById("x").value;
+        let y = document.getElementById("y").value;
+        console.log(x);
+        console.log(y);
+
+        if ( x > 0 && x < 9 && y > 0 && y < 9) {
+
+            document.getElementsByClassName("container")[0].getElementsByClassName("row")[x]
+                .getElementsByClassName("col")[y].appendChild(document.getElementById("dropItem"));
+        }
+
+
 }
 
 
@@ -127,10 +152,10 @@ function createFidlesBoardTags(size) {
     let matrix = [];
     for (let i = 1; i < (size / 2) + 1; i++) {
         white_first.push(
-            <Col className="white" children={i*2}/>
+            <Col className="white" />
         );
         black_first.push(
-            <Col className="black" children={new Figure("White",null , i*2+1)}/>
+            <Col className="black" />
         );
         black_first.push(
             <Col className="white"/>
@@ -139,7 +164,7 @@ function createFidlesBoardTags(size) {
             <Col className="black"/>
         );
     }
-    for (let i = 1; i < size + 1; i++) {
+    for (let i = 1; i < (size/2) + 1; i++) {
         matrix.push(<Row>{white_first}</Row>);
         matrix.push(<Row>{black_first}</Row>);
     }
