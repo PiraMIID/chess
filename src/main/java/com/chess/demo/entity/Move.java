@@ -1,11 +1,10 @@
 package com.chess.demo.entity;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
-@AllArgsConstructor
-@Data
+
+//@AllArgsConstructor
+//@Data
 public class Move {
     String player;
     String figure;
