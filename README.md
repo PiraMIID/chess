@@ -1,4 +1,5 @@
 # chess
 
-##Demo view
+## Demo view
+
 ![alt text](chess.png)
